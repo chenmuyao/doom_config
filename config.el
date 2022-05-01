@@ -19,8 +19,8 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
- (setq doom-font (font-spec :family "monospace" :size 15 :weight 'regular)
-       doom-variable-pitch-font (font-spec :family "sans" :size 15))
+ (setq doom-font (font-spec :family "monospace" :size 16 :weight 'regular)
+       doom-variable-pitch-font (font-spec :family "sans" :size 16))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -65,8 +65,8 @@
 ;;epub
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
 (defun my-nov-font-setup ()
-  (face-remap-add-relative 'variable-pitch :family "Noto Serif"
-                                           :height 1.0 :size 16))
+  (face-remap-add-relative 'variable-pitch :family "Noto Sans"
+                                           :height 1.25 :size 17))
 (add-hook 'nov-mode-hook 'my-nov-font-setup)
 
 ;;Theme changer
@@ -74,7 +74,7 @@
 (setq calendar-latitude 48.864716)
 (setq calendar-longitude 2.349014)
 (require 'theme-changer)
-(change-theme 'doom-nord-light 'doom-oceanic-next)
+(change-theme 'doom-nord-light 'doom-gruvbox-light)
 
 ;; evil-substitude (cl do the same thing !)
 ;; (remove-hook 'doom-first-input-hook #'evil-snipe-mode)
